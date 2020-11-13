@@ -10,34 +10,36 @@
     <meta name="robots" content="index, follow">
     <!--When you have a few pages with identical content, you can use a canonical tag to tell search engines which page should be prioritized.-->
     <link href="URL" rel="canonical">
-    <!-- Start of Async Drift Code -->
-    <script>
+     
+     <!-- Start of Async Drift Code -->
+<script>
+    "use strict";
+    
     !function() {
-      var t;
-      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
-      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-      t.factory = function(e) {
-        return function() {
-          var n;
-          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
         };
-      }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-      }), t.load = function(t) {
-        var e, n, o, i;
-        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
-        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-      });
+      }
     }();
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('t8u69cdktc8d');
-
-               
-
-            
+    drift.load('n2szew43mvcd');
     </script>
-     <!-- End of Async Drift Code -->    
+    <!-- End of Async Drift Code --> 
+
      <link rel="icon" href="image/site-icon.png">  
     <link href="css/style.css" rel="stylesheet" type="text/css"> 
     <link href="css/slicknav.min.css" rel="stylesheet" type="text/css"> 
